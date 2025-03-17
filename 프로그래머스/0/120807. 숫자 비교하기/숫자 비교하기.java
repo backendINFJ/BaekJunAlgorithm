@@ -1,11 +1,9 @@
 class Solution {
-   public int solution(int num1, int num2) {
-        int answer = 0;
+    public int solution(int num1, int num2) {
         if (num1 == num2) {
-         answer = 1;
-        } else if (num1 != num2) {
-            answer = -1;
+            return 1;
+        } else {
+            return -1;
         }
-        return answer;
     }
 }
