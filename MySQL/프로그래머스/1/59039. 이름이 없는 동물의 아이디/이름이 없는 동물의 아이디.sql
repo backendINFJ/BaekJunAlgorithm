@@ -1,0 +1,9 @@
+/*
+1. 필터 : 이름이 없는 동물
+2. 컬럼 : 동물의 ID
+3. 정렬 : ID는 오름차순
+*/
+SELECT ANIMAL_ID
+FROM ANIMAL_INS
+WHERE NAME IS NULL
+ORDER BY ANIMAL_ID ASC;
