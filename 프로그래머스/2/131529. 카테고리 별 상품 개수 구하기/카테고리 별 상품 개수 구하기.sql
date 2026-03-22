@@ -1,0 +1,11 @@
+/*
+1. 컬럼 : 상품 카테고리 코드, 상품개수
+2. 조건 : -
+3. 정렬 : 카테고리 코드 ASC
+*/
+SELECT
+    LEFT(PRODUCT_CODE, 2) AS CATEGORY
+,   COUNT(PRODUCT_ID)     AS PRODUCTS
+FROM PRODUCT
+GROUP BY LEFT(PRODUCT_CODE, 2)
+ORDER BY CATEGORY ASC;
