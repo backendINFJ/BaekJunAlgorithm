@@ -1,0 +1,14 @@
+/*
+1. 필터 : 통풍시트,열선시트,가죽시트 중 하나 이상 옵션이 포함된 자동차가 종류별로 몇대인지
+2. 컬럼 : COUNT(CAR_TYPE)AS CARS
+3. 정렬 : CAR_TYPE ASC;
+4. 테이블 : CAR_RENTAL_COMPANY_CAR
+*/
+SELECT CAR_TYPE
+,      COUNT(*) AS CARS
+FROM CAR_RENTAL_COMPANY_CAR
+WHERE OPTIONS LIKE '%열선시트%'
+OR    OPTIONS LIKE '%가죽시트%'
+OR    OPTIONS LIKE '%통풍시트%'
+GROUP BY CAR_TYPE
+ORDER BY CAR_TYPE ASC;
