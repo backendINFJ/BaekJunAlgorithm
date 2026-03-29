@@ -1,0 +1,12 @@
+/*
+1. 필터 : 보호 시작일 > 입양일 아이디,이름 조회하는 쿼리
+2. 컬럼 : ANIMAL_ID, NAME
+3. 정렬 : 보호 시작일 ASC
+*/
+
+SELECT i.ANIMAL_ID
+,      i.NAME
+FROM ANIMAL_INS AS i
+    INNER JOIN ANIMAL_OUTS AS o ON i.ANIMAL_ID = o.ANIMAL_ID
+WHERE i.DATETIME > o.DATETIME
+ORDER BY i.DATETIME ASC;
