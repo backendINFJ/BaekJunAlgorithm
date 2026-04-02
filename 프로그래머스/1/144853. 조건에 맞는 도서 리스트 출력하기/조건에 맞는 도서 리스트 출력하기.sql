@@ -1,0 +1,12 @@
+/*
+1. filter : Book 테이블에서 2021년에 출팔된 '인문'카테고리에 속하는 도서 리스트
+2. column : BOOK_ID, PUBLISHED_DATE
+3. sort : PUBLISHED_DATE ASC
+*/
+
+SELECT BOOK_ID
+,      DATE_FORMAT(PUBLISHED_DATE, '%Y-%m-%d')
+FROM BOOK
+WHERE PUBLISHED_DATE LIKE '2021%'
+AND   CATEGORY = '인문'
+ORDER BY PUBLISHED_DATE ASC;
